@@ -34,14 +34,48 @@ def apply_coupons(cart, coupons)
 end
 
 
+
+
+
+
+
+
 def apply_clearance(cart)
+<<<<<<< HEAD
   cart.each do |food_item_key, food_item_hash|
     if  cart[food_item_key][:clearance] == true
        cart[food_item_key][:price] =  (cart[food_item_key][:price] * 0.8).round(1)
     end
   end 
   cart 
+=======
+#  binding.pry 
+  cart.each do |food_item_key, food_item_hash|
+    if  cart[food_item_key][:clearance] == true
+       cart[food_item_key][:price] =  cart[food_item_key][:price] * 0.8
+    end
+  end 
+  cart 
+#  binding.pry
+>>>>>>> 0c0c5b97b7f72a9c39054ad262f939e24ff64d57
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 def checkout(cart, coupons)
